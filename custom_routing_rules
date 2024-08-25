@@ -7,14 +7,14 @@
 	{
 		"outboundTag": "direct",
 		"domain": [
-			"geosite:cn"
+			"geosite:ir"
 		]
 	},
 	{
 		"outboundTag": "direct",
 		"ip": [
 			"geoip:private",
-			"geoip:cn"
+			"geoip:ir"
 		]
 	},
 	{
