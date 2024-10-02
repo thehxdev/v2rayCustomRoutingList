@@ -1,48 +1,47 @@
 [
   {
-    "outboundTag": "direct",
-    "domain": [
-      "domain:example.com",
-      "domain:example2.com"
-    ]
+    "remarks": "Block udp443",
+    "outboundTag": "block",
+    "port": "443",
+    "network": "udp"
   },
   {
-    "type": "field",
+    "remarks": "Block ADs",
     "outboundTag": "block",
     "domain": [
       "geosite:category-ads-all"
     ]
   },
   {
-    "type": "field",
+    "remarks": "Bypass LAN domain name",
     "outboundTag": "direct",
     "domain": [
-      "geosite:private",
-      "geosite:apple@cn",
-      "geosite:google@cn",
-      "geosite:tld-cn"
+      "geosite:private"
     ]
   },
   {
-    "type": "field",
-    "outboundTag": "proxy",
-    "domain": [
-      "geosite:geolocation-!cn"
-    ]
-  },
-  {
-    "type": "field",
+    "remarks": "Bypass LAN IP",
     "outboundTag": "direct",
     "ip": [
-      "geoip:private",
-      "geoip:cn"
-    ],
-    "domain": [
-      "geosite:cn"
+      "geoip:private"
     ]
   },
   {
-    "type": "field",
+    "remarks": "Bypass Iran domains",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:ir"
+    ]
+  },
+  {
+    "remarks": "Bypass Iran IPs",
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:ir"
+    ]
+  },
+  {
+    "remarks": "Final",
     "port": "0-65535",
     "outboundTag": "proxy"
   }
